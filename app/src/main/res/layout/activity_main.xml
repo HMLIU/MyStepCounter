@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="15px"
+    android:paddingRight="15px"
+    style="@style/Base.TextAppearance.AppCompat.Headline"
+    tools:context="com.fimapp.mystepcounter.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="计步器 Demo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="86dp"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="10px">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="步数"
+                android:id="@+id/stepCountLabel"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/stepCountText"
+                android:layout_gravity="center_horizontal"
+                android:textSize="48px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="步长"
+                android:id="@+id/stepLengthLabel"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0.00 cm"
+                android:id="@+id/stepLengthText"
+                android:layout_gravity="center_horizontal"
+                android:textSize="48px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="86dp"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:layout_marginTop="50px"
+        android:layout_marginBottom="10px">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="手机角度"
+                android:id="@+id/angelLabel"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0 °"
+                android:id="@+id/angelText"
+                android:layout_gravity="center_horizontal"
+                android:textSize="48px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="坐标"
+                android:id="@+id/coordLabel"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/coordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="X: 0.00  Y: 0.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="36px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnStop"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:checked="false"
+            android:onClick="startStep"
+            android:paddingBottom="50px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:paddingTop="50px"
+            android:text="开始"
+            android:textOff="开始"
+            android:textOn="停止"
+            android:visibility="visible" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="停止"
+            android:id="@+id/btnStop"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginBottom="30px"
+            android:textOff="开始"
+            android:textOn="停止"
+            android:paddingTop="50px"
+            android:paddingBottom="50px"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:onClick="stopStep" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
